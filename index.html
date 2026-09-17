@@ -281,3 +281,4 @@ function burst(){const box=document.getElementById('confetti');box.innerHTML='';
 function play(){music.volume=.62;music.play().catch(()=>{})}
 document.getElementById('openBtn').onclick=()=>{start.style.display='none';play();burst()};document.getElementById('next').onclick=()=>go(current===pages.length-1?0:current+1);document.getElementById('prev').onclick=()=>{if(current>0)go(current-1)};document.getElementById('musicBtn').onclick=()=>{if(music.paused)play();else music.pause()};document.getElementById('lightbox').onclick=()=>document.getElementById('lightbox').style.display='none';window.addEventListener('load',()=>{render();play()});document.addEventListener('pointerdown',()=>{if(start.style.display!=='none')return;if(music.paused)play()});
 </script></body></html>
+
